@@ -1,2 +1,2 @@
-cd server && yarn start &
+cd frontend && yarn start &
 cd client && yarn start

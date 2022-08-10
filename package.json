@@ -1,0 +1,45 @@
+{
+  "name": "college-petition",
+  "version": "1.0.0",
+  "description": "A petition app where student can put out their complains",
+  "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "server": "nodemon server.js",
+    "client": "cd frontend && npm run start",
+    "client-install": "cd frontend && npm install",
+    "server-install": "npm install",
+    "install-all": "concurrently \"npm run frontend-install\" \"npm run server-install\" ",
+    "dev": "concurrently \"npm run frontend\" \"npm run server\" ",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "keywords": [
+    "change",
+    "clone",
+    "change-org-clone",
+    "mern",
+    "fullstack",
+    "node.js",
+    "express.js",
+    "github",
+    "mern stack",
+    "change org",
+    "change org clone github",
+    "change org clone"
+  ],
+  "author": "Athul Vinod",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^7.0.0",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "nodemon": "^2.0.15"
+  }
+}
