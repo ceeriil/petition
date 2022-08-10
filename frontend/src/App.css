@@ -1,42 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
 :root {
-  --rubik: "Rubik", sans-serif;
-  --red: #ec2c22;
-  --blue: #118eef;
+  --rubik: "Quicksand", sans-serif;
+  --lightgreen: #ec2c22;
+  --blue: #011e26;
+  --lightgreen: #00dc81;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
 }
 
 .rubik {
   font-family: var(--rubik) !important;
 }
 .redColor {
-  color: var(--red) !important;
+  font-family: "Quicksand", sans-serif;
 }
 .blueColor {
-  color: var(--blue) !important;
+  color: var(--lightgreen) !important;
+}
+.lightGreen {
+  color: var(--lightgreen);
 }
 
 .nav-link {
-  color: #000 !important;
+  color: #fff !important;
 }
 .nav-link:hover {
-  color: var(--red) !important;
+  color: var(--lightGreen) !important;
 }
 
 .btn_red {
-  background: var(--red);
+  background: var(--lightgreen);
+}
+
+.btn {
+  background: var(--lightgreen);
+  color: #fff;
 }
 
 .btn_blue {
-  background: linear-gradient(
-    180.08deg,
-    #cbfdfe 0.11%,
-    #24cce2 52.75%,
-    #0993f8 96.4%,
-    #1bdbdf 123.36%
-  );
-  padding: 0.8rem 1.5rem;
+  background: var(--lightgreen);
+  padding: 0.5rem 1.5rem;
   border-radius: 3rem;
+  color: #fff;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.form-control {
+  background: #ffffff10;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.form-control:focus {
+  background: #ffffff10;
+  border: 1px solid var(--lightgreen);
+  color: #fff;
+  box-shadow: none;
 }
 
 @media screen and (min-width: 991px) {
@@ -56,24 +80,26 @@
   margin: 0.1rem;
 }
 
-#card {
-  background: #fdf9f220;
+#card,
+.card {
+  background: rgba(1, 42, 53, 0.5);
   border: 1px solid #d3bb9110;
   cursor: pointer;
+  transition: 0.2s ease-in;
 }
 #card:hover {
-  background: #ecdbbd;
+  background: #ffffff20;
 }
 .tab-link.active {
-  color: var(--red) !important;
-  border-bottom: 2px solid var(--red);
+  color: var(--lightgreen) !important;
+  border-bottom: 2px solid var(--lightgreen);
 }
 .tab-link {
   font-family: var(--rubik);
   font-weight: bold;
 }
 .post_link:hover {
-  color: var(--red) !important;
+  color: var(--lightgreen) !important;
 }
 .tab-link.disabled {
   color: #8f8f8f !important;

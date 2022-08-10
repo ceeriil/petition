@@ -104,7 +104,7 @@ function SignUp() {
                     className="btn btn-danger btn_red"
                     disabled={state.error ? false : isSubmitting}
                   >
-                    <strong>{state.loading ? "Loading..." : "Login"}</strong>
+                    <strong>{state.loading ? "Loading..." : "Sign Up"}</strong>
                   </button>
                 </form>
               )}

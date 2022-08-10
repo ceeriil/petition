@@ -1,8 +1,8 @@
 const categories = [
   {
-    icon: "fas fa-female",
-    name: "Women's rights",
-    key: "women-s-right",
+    icon: "fa fa-flag",
+    name: "General",
+    key: "General",
   },
 
   {
@@ -13,20 +13,14 @@ const categories = [
 
   {
     icon: "fas fa-users",
-    name: "Human rights",
-    key: "human-rights",
+    name: "Student Welfare",
+    key: "student-welfare",
   },
 
   {
-    icon: "fas fa-trophy",
-    name: "Politics",
-    key: "politics",
-  },
-
-  {
-    icon: "fas fa-map-marker-alt",
-    name: "Local",
-    key: "local",
+    icon: "fa fa-wrench",
+    name: "Utilities",
+    key: "utilities",
   },
 
   {
@@ -34,22 +28,11 @@ const categories = [
     name: "Education",
     key: "education",
   },
-  {
-    icon: "fas fa-child",
-    name: "Child rights",
-    key: "child-rights",
-  },
 
   {
     icon: "fas fa-heartbeat",
     name: "Health",
     key: "health",
-  },
-
-  {
-    icon: "fas fa-desktop",
-    name: "Technology",
-    key: "technology",
   },
 ];
 export default categories;

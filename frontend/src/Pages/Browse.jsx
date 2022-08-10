@@ -5,7 +5,7 @@ import Recent from "../Components/Petitions/Recent";
 import Victorys from "../Components/Petitions/Victorys";
 
 function Browse() {
-  window.document.title = "Change - Browse"
+  window.document.title = "Change - Browse";
   const [route, setRoute] = useState("featured");
 
   function setKey(key) {
@@ -25,8 +25,8 @@ function Browse() {
   };
 
   return (
-    <div style={{ background: "#f6f4f6", minHeight: "100vh" }}>
-      <div style={{ background: "#fff", borderBottom: "1px solid #c7c7c7" }}>
+    <div style={{ minHeight: "100vh" }}>
+      <div style={{ borderBottom: "1px solid #c7c7c7" }}>
         <div className="container mt-4">
           <h2 className="text-center rubik">Discover petitions</h2>
           <ul className="nav justify-content-center">

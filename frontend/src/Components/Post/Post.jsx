@@ -22,7 +22,7 @@ function Post({ petitions }) {
                 <h3 className=" text-capitalize ">
                   <Link
                     href={`/p/${e._id}`}
-                    className="text-dark text-decoration-none post_link rubik"
+                    className="text-light text-decoration-none post_link rubik"
                   >
                     {e.title}
                   </Link>
@@ -46,7 +46,7 @@ function Post({ petitions }) {
                       {e.supporters.length !== e.expectedVote ? (
                         <Link href={`/p/${e._id}`}>
                           <a
-                            className="btn btn-danger btn-block  btn_red"
+                            className="btn btn-block"
                             style={{ width: "100%" }}
                           >
                             <strong>Sign this petition</strong>
@@ -58,7 +58,7 @@ function Post({ petitions }) {
                     <div>
                       {e.supporters.some((e) => e.id == userInfo._id) ? (
                         <a
-                          className="btn btn-danger btn_red btn-block disabled"
+                          className="btn btn-block disabled"
                           style={{ width: "100%" }}
                         >
                           <strong>Voted</strong>

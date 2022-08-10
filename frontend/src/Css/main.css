@@ -1,8 +1,13 @@
 .navbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+  color: #fff;
 }
 
 body {
-  background: #001629;
+  background: #011e26;
   color: #fff;
+}
+
+.progress-bar {
+  background-color: #00dc81;
 }

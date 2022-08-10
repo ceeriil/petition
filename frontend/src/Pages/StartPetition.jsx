@@ -41,10 +41,10 @@ function StartPetition() {
               <div
                 className="card text-center"
                 id="card"
-                style={e.key == key ? { background: "#ecdbbd" } : null}
+                style={e.key == key ? { background: "#ffffff20" } : null}
               >
                 <div className="card-body">
-                  <h1 className="blueColor">
+                  <h1 className="lightGreen">
                     <i className={e.icon}></i>
                   </h1>
                   <h5 className="mt-3">{e.name}</h5>
@@ -56,7 +56,7 @@ function StartPetition() {
       </div>
 
       <button
-        className="btn btn-danger btn_red  float-end"
+        className="btn  float-end"
         onClick={() => nextFunc()}
         disabled={key == "" ? "disabled" : null}
       >

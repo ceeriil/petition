@@ -9,12 +9,12 @@ import Declare from "../Components/Petitions/Declare";
 import { Link } from "wouter";
 
 function PetitionPage({ id }) {
-  window.document.title = "Change - Petitions"
+  window.document.title = "Change - Petitions";
   const dispatch = useDispatch();
   const [d, setD] = useState("");
   const { loading, data, error } = useSelector((state) => state.details);
   const { userInfo } = useSelector((state) => state.login);
-  window.document.title = "Change - Petition"
+  window.document.title = "Change - Petition";
   const [route, setRoute] = useState("details");
   function setKey(key) {
     setRoute(key);
@@ -41,9 +41,9 @@ function PetitionPage({ id }) {
   }, []);
 
   return (
-    <div style={{ background: "#f6f4f6", minHeight: "100vh" }}>
+    <div style={{ minHeight: "100vh" }}>
       <div>
-        <div style={{ background: "#fff", borderBottom: "1px solid #c7c7c7" }}>
+        <div style={{ borderBottom: "1px solid #c7c7c7" }}>
           <div className="container mt-4">
             <ul className="nav justify-content-center">
               <li className="nav-item">
@@ -75,8 +75,7 @@ function PetitionPage({ id }) {
 
               {data && (
                 <>
-                  {error ||
-                  userInfo == undefined  ? null : (
+                  {error || userInfo == undefined ? null : (
                     <>
                       {data.user.id == userInfo._id ? (
                         <>

@@ -6,7 +6,7 @@ function Navbar() {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <Link href="/">
           <a className="navbar-brand fs-3 rubik blueColor" href="#">
@@ -25,7 +25,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          class={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+          className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
           id="navbarNav"
         >
           <ul className="navbar-nav">

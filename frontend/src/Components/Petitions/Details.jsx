@@ -136,7 +136,7 @@ function Details({ data, loading, userInfo }) {
                 <div>
                   <div className="progress mt-4">
                     <div
-                      className="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                      className="progress-bar progress-bar-striped progress-bar-animated bg-teal"
                       role="progressbar"
                       style={{
                         width: `${Math.floor(
