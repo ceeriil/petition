@@ -57,7 +57,7 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className="nav-link "
-                href="https://github.com/DevAthul-88/Change-Org-Clone"
+                href="https://github.com/ceeriil"
                 target={"_blank"}
               >
                 Help

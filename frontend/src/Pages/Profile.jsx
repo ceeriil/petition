@@ -8,7 +8,7 @@ import Loading from "../Components/Loader";
 import * as timeago from "timeago.js";
 
 function Profile({ id }) {
-  window.document.title = "Change - Profile";
+  window.document.title = "BIU Petiton - Profile";
   const [location, setLocation] = useLocation();
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.login);

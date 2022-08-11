@@ -9,12 +9,12 @@ import Declare from "../Components/Petitions/Declare";
 import { Link } from "wouter";
 
 function PetitionPage({ id }) {
-  window.document.title = "Change - Petitions";
+  window.document.title = "BIU Petiton - Petitions";
   const dispatch = useDispatch();
   const [d, setD] = useState("");
   const { loading, data, error } = useSelector((state) => state.details);
   const { userInfo } = useSelector((state) => state.login);
-  window.document.title = "Change - Petition";
+  window.document.title = "BIU Petiton - Petition";
   const [route, setRoute] = useState("details");
   function setKey(key) {
     setRoute(key);

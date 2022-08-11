@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch , connect} from "react-redux";
+import { useSelector, useDispatch, connect } from "react-redux";
 import { petitionByDate } from "../Redux/All/action";
 import IndexHeader from "../Components/IndexHeader";
 import Tags from "../Components/Tags";
@@ -7,7 +7,7 @@ import Post from "../Components/Post/Post";
 import Loader from "../Components/Loader";
 
 function Index() {
-  window.document.title = 'Change'
+  window.document.title = "BIU Petiton";
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.all);
 

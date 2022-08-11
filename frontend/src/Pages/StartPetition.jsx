@@ -4,7 +4,7 @@ import categories from "../data/category";
 import { useLocation } from "wouter";
 
 function StartPetition() {
-  window.document.title = "Change - Start";
+  window.document.title = "BIU Petiton - Start";
   const [location, setLocation] = useLocation();
   const [key, setKey] = useState("");
 
@@ -26,8 +26,8 @@ function StartPetition() {
     <div className="container mt-5">
       <h1>What kind of issue are you petitioning on?</h1>
       <h5 className="mt-3">
-        Selecting a topic allows Change.org to recommend your petition to
-        interested supporters.
+        Selecting a topic allows us to recommend your petition to interested
+        supporters.
       </h5>
 
       <div className="card-sec mt-5 row">

@@ -7,9 +7,14 @@ const petitionRoute = require("./routes/petitionRoute");
 const mongoose = require("mongoose");
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true})); 
+app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", userRoute);
 app.use("/api/petition", petitionRoute);
+
+app.use((req, res, next) => {
+  console.log(req.path, req.method);
+  next();
+});
 
 const port = process.env.PORT || 3001;
 
