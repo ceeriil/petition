@@ -7,7 +7,7 @@ import { loginAction } from "../Redux/Login/action";
 import { useEffect } from "react";
 
 function Login() {
-  window.document.title = "Change - Login";
+  window.document.title = "BIU Petition - Login";
   const state = useSelector((state) => state.login);
   const dispatch = useDispatch();
 
@@ -82,7 +82,7 @@ function Login() {
 
                   <button
                     type="submit"
-                    className="btn btn-danger btn_red"
+                    className="btn"
                     disabled={state.error ? false : isSubmitting}
                   >
                     <strong>{state.loading ? "Loading..." : "Login"}</strong>
@@ -91,11 +91,13 @@ function Login() {
               )}
             </Formik>
 
-            <Link href="/signup">
-              <a className="blueColor mt-3 d-block">
-                Don't have and account?, Create one now
-              </a>
-            </Link>
+            <p className="mt-3 d-block">
+              {" "}
+              Don't have and account?{" "}
+              <Link href="/signup">
+                <a className="blueColor">Create one now</a>
+              </Link>{" "}
+            </p>
           </div>
         </div>
       </div>

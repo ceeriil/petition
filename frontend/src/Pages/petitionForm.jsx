@@ -1,24 +1,25 @@
 import React from "react";
 import { Formik } from "formik";
-import {useDispatch , useSelector} from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
 import CreateSchema from "../Schema/Create";
-import petitionCreateAction from '../Redux/Petition/action'
-
+import petitionCreateAction from "../Redux/Petition/action";
 
 function PetitionForm({ id }) {
-  window.document.title = "Change - New petition"
+  window.document.title = "Change - New petition";
   const dispatch = useDispatch();
-  const {loading , error , status} = useSelector((state) => state.create)
-  
+  const { loading, error, status } = useSelector((state) => state.create);
 
   return (
     <div className="container mt-5">
-        {status ? (
-        <div className="alert alert-success alert-dismissible fade show" role="alert">
+      {status ? (
+        <div
+          className="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
           Petition created successfully!
         </div>
       ) : null}
-        {error ? (
+      {error ? (
         <div className="alert alert-danger" role="alert">
           {error}
         </div>
@@ -38,7 +39,7 @@ function PetitionForm({ id }) {
               }}
               validationSchema={CreateSchema}
               onSubmit={(values, { setSubmitting }) => {
-                dispatch(petitionCreateAction(values))
+                dispatch(petitionCreateAction(values));
               }}
             >
               {({
@@ -91,7 +92,6 @@ function PetitionForm({ id }) {
                     <label className="form-label">Signature goal</label>
                     <input
                       type="number"
-                     
                       className={`form-control ${
                         errors.goal ? "border-danger" : null
                       }`}
@@ -112,7 +112,7 @@ function PetitionForm({ id }) {
                     <label className="form-label mt-3">Your message</label>
                     <textarea
                       className={`form-control ${
-                       errors.message ? "border-danger" : null
+                        errors.message ? "border-danger" : null
                       }`}
                       name="message"
                       value={values.message}
@@ -124,8 +124,10 @@ function PetitionForm({ id }) {
                     </div>
                   </div>
 
-                  <button className="btn btn-danger btn_red" type="submit">
-                    <strong>{loading ? 'Loading...' : 'Create petition'}</strong>
+                  <button className="btn" type="submit">
+                    <strong>
+                      {loading ? "Loading..." : "Create petition"}
+                    </strong>
                   </button>
                 </form>
               )}

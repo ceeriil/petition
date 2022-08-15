@@ -11,3 +11,12 @@ body {
 .progress-bar {
   background-color: #00dc81;
 }
+
+.logo {
+  width: 8%;
+  margin-right: 0.6rem;
+}
+
+.navbar > .container {
+  flex-wrap: nowrap;
+}

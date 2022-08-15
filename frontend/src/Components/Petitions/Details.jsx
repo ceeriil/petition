@@ -83,7 +83,7 @@ function Details({ data, loading, userInfo }) {
                 <div className="alert alert-danger">{errors}</div>
               ) : null}
 
-              <div className=" col-8">
+              <div className="col-sm-12 col-md-8">
                 {data.completed ? (
                   <div className="alert alert-success">
                     <div className="alert-heading fs-5 fw-bold">Well done!</div>

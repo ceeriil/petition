@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../Css/main.css";
 import { Link } from "wouter";
+import Logo from "../../image/logo.svg";
 
 function Navbar() {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -9,7 +10,8 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <Link href="/">
-          <a className="navbar-brand fs-3 rubik blueColor" href="#">
+          <a className="navbar-brand fs-4 rubik text-uppercase" href="/">
+            <img src={Logo} alt="logo" className="logo" />
             <strong>BIU Petition</strong>
           </a>
         </Link>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../Css/main.css";
 import { logOutAction } from "../../Redux/Login/action";
 import { useSelector, useDispatch } from "react-redux";
+import Logo from "../../image/logo.svg";
 import { Link } from "wouter";
 
 function Navbar() {
@@ -16,10 +17,11 @@ function Navbar() {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <Link href="/">
-          <a className="navbar-brand fs-3 rubik blueColor" href="#">
+          <a className="navbar-brand fs-4 rubik text-uppercase" href="/">
+            <img src={Logo} alt="logo" className="logo" />
             <strong>BIU Petition</strong>
           </a>
         </Link>

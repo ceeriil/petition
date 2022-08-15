@@ -101,7 +101,7 @@ function SignUp() {
 
                   <button
                     type="submit"
-                    className="btn btn-danger btn_red"
+                    className="btn"
                     disabled={state.error ? false : isSubmitting}
                   >
                     <strong>{state.loading ? "Loading..." : "Sign Up"}</strong>
@@ -110,11 +110,12 @@ function SignUp() {
               )}
             </Formik>
 
-            <Link href="/login">
-              <a className="blueColor mt-3 d-block">
-                Already have an account? Login Now
-              </a>
-            </Link>
+            <p className="mt-3 d-block">
+              Already have an account?
+              <Link href="/login">
+                <a className="blueColor"> Login Now</a>
+              </Link>
+            </p>
           </div>
         </div>
       </div>

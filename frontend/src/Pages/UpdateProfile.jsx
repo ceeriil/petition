@@ -5,7 +5,7 @@ import EditSchema from "../Schema/Edit";
 import EditProfileAction from "../Redux/EditProfile/action";
 
 function UpdateProfile() {
-  window.document.title = "Change - Update"
+  window.document.title = "Change - Update";
   const { userInfo } = useSelector((state) => state.login);
   const { loading, status, error } = useSelector((state) => state.editProfile);
 
@@ -31,12 +31,12 @@ function UpdateProfile() {
               initialValues={{
                 email: userInfo.email,
                 userName: userInfo.userName,
-                desc:userInfo.description ? userInfo.description : " ",
+                desc: userInfo.description ? userInfo.description : " ",
+                department: userInfo.department ? userInfo.description : " ",
                 id: userInfo._id,
               }}
               validationSchema={EditSchema}
               onSubmit={(values, { setSubmitting }) => {
-                
                 dispatch(EditProfileAction(values));
               }}
             >
@@ -85,12 +85,33 @@ function UpdateProfile() {
 
                   <div className="mb-3">
                     <label className="form-label">About You - (optional)</label>
-                    <textarea name="desc" className="form-control" cols={30} rows={10}
-                    defaultValue={values.desc} 
-                    onChange={handleChange}
+                    <textarea
+                      name="desc"
+                      className="form-control"
+                      cols={30}
+                      rows={10}
+                      defaultValue={values.desc}
+                      onChange={handleChange}
                     ></textarea>
                     <div className="form-label text-danger">
                       {errors.desc && touched.desc && errors.desc}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <label className="form-label">
+                      Department - (optional)
+                    </label>
+                    <input
+                      name="desc"
+                      className="form-control"
+                      defaultValue={values.department}
+                      onChange={handleChange}
+                    />
+                    <div className="form-label text-danger">
+                      {errors.department &&
+                        touched.department &&
+                        errors.department}
                     </div>
                   </div>
 

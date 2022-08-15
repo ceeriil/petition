@@ -32,7 +32,7 @@ function Comments({ loading, data }) {
                   <h5 className="card-title rubik">
                     <Link
                       href={e.display ? `/profile/${e.id}` : "#"}
-                      className="text-dark text-decoration-none"
+                      className="text-light text-decoration-none"
                     >
                       {e.display ? e.user : "Anonymous"}
                     </Link>
