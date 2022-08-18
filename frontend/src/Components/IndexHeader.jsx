@@ -23,7 +23,7 @@ function IndexHeader() {
     };
   }, []);
   return (
-    <div className="text-center mt-sm-5" id="indexHeader_text">
+    <div className="text-center py-sm-5" id="indexHeader_text">
       <div>
         <h1 className="rubik fw-bolder  display-5">
           Student platform for Change

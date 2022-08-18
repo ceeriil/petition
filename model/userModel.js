@@ -8,7 +8,12 @@ const userSchema = new mongoose.Schema(
     },
     description: {
       type: String,
-      default:null,
+      default: null,
+      required: false,
+    },
+    department: {
+      type: String,
+      default: null,
       required: false,
     },
     email: {

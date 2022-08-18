@@ -68,7 +68,7 @@ function Post({ petitions }) {
                           {e.supporters.length !== e.expectedVote ? (
                             <Link href={`/p/${e._id}`}>
                               <a
-                                className="btn btn-danger btn_red btn-block"
+                                className="btn btn-block"
                                 style={{ width: "100%" }}
                               >
                                 <strong>Sign this petition</strong>

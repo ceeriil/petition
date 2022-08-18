@@ -1,5 +1,5 @@
 import React from "react";
-import NotFoundImage from "../image/notfound.png";
+import NotFoundImage from "../image/notfound.svg";
 
 function NotFound() {
   window.document.title = "BIU Petiton - NotFound";
@@ -9,7 +9,8 @@ function NotFound() {
         src={NotFoundImage}
         alt="404"
         srcset=""
-        className="mx-auto d-block"
+        className="mx-auto d-block pt10"
+        style={{ width: "60%" }}
       />
     </div>
   );

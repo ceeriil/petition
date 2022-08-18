@@ -204,7 +204,7 @@ function Details({ data, loading, userInfo }) {
                                       </div>
                                       <button
                                         type="submit"
-                                        className="btn mt-4 btn_red btn-danger"
+                                        className="btn mt-4"
                                         disabled={loading}
                                       >
                                         {loader ? (

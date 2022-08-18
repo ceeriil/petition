@@ -7,7 +7,7 @@ const { loginSchema, registerSchema } = require("../validate/auth");
 const userCtrl = {
   register: async (req, res) => {
     try {
-      const { userName, email, password , description } = req.body;
+      const { userName, email, password, description, department } = req.body;
 
       const value = await registerSchema.validate({
         userName: userName,
@@ -26,6 +26,7 @@ const userCtrl = {
       const user = new userSchema({
         userName: userName,
         email: email,
+        department: department,
         description: description,
         password: hashedPassword,
       });
@@ -61,6 +62,7 @@ const userCtrl = {
         _id: user._id,
         userName: user.userName,
         email: user.email,
+        department: user.department,
         description: user.description,
         createdAt: user.createdAt,
       };
@@ -72,12 +74,13 @@ const userCtrl = {
 
   edit: async (req, res) => {
     try {
-      const { id, email, userName , desc  } = req.body;
+      const { id, email, userName, desc, department } = req.body;
 
       const user = {
         email: email,
         userName: userName,
-        description:desc,
+        description: desc,
+        department: department,
       };
       await userSchema.updateOne({ _id: id }, user);
 
@@ -102,32 +105,33 @@ const userCtrl = {
     }
   },
 
-  getUserById: async (req , res) => {
+  getUserById: async (req, res) => {
     try {
-     const data = await userSchema.findOne({_id: req.params.id})
-     if(!data) return res.json({message:"No user found."})
-     
-     const user = {
-       userName:data.userName,
-       email:data.email,
-       _id:data._id,
-       description: data.description,
-       createdAt:data.createdAt
-     }
-     res.json(user)
+      const data = await userSchema.findOne({ _id: req.params.id });
+      if (!data) return res.json({ message: "No user found." });
+
+      const user = {
+        userName: data.userName,
+        email: data.email,
+        _id: data._id,
+        department: data.department,
+        description: data.description,
+        createdAt: data.createdAt,
+      };
+      res.json(user);
     } catch (error) {
-      res.json({error: error.message})
+      res.json({ error: error.message });
     }
   },
 
   userCount: async (req, res) => {
     try {
-      const data = await userSchema.find().count()
-      res.json({count:data})
+      const data = await userSchema.find().count();
+      res.json({ count: data });
     } catch (error) {
-      res.json({error: error.message })
+      res.json({ error: error.message });
     }
-  }
+  },
 };
 
 module.exports = userCtrl;
