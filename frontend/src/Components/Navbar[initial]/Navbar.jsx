@@ -11,7 +11,8 @@ function Navbar() {
       <div className="container">
         <Link href="/">
           <a className="navbar-brand fs-4 rubik text-uppercase" href="/">
-            <img src={Logo} alt="logo" className="logo" />
+            {/*             <img src={Logo} alt="logo" className="logo" />
+             */}{" "}
             <strong>BIU Petition</strong>
           </a>
         </Link>

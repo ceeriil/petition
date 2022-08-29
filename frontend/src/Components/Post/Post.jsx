@@ -96,19 +96,6 @@ function Post({ petitions }) {
                 </span>
               </h5>
 
-              <div>
-                <h5 className="ml-4 rubik fs-6">
-                  {e.completed ? (
-                    <h5 className="rubik fw-bold fs-6">Victory</h5>
-                  ) : (
-                    <>
-                      Needs {e.expectedVote - e.supporters.length} more
-                      signatures
-                    </>
-                  )}
-                </h5>
-              </div>
-
               <h5 className="rubik fs-6">
                 <span>
                   <i className="fa fa-folder" aria-hidden="true"></i> Category:{" "}
@@ -116,6 +103,18 @@ function Post({ petitions }) {
                 <Link href={`/category/${e.category}`}>
                   <a className="blueColor">{filter(e.category)}</a>
                 </Link>
+              </h5>
+            </div>
+
+            <div className="card-footer">
+              <h5 className="ml-4 rubik fs-6">
+                {e.completed ? (
+                  <h5 className="rubik fw-bold fs-6">Victory</h5>
+                ) : (
+                  <>
+                    Needs {e.expectedVote - e.supporters.length} more signatures
+                  </>
+                )}
               </h5>
             </div>
           </div>

@@ -48,8 +48,7 @@ body {
   border-radius: 3rem;
   color: #fff;
 
-  background-color: #08aeea;
-  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-color: #00dc81;
 }
 
 .btn-danger {
@@ -109,4 +108,9 @@ body {
 }
 .tab-link.disabled {
   color: #8f8f8f !important;
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+  color: #fff;
 }

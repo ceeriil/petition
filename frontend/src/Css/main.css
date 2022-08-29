@@ -16,7 +16,3 @@ body {
   width: 8%;
   margin-right: 0.6rem;
 }
-
-.navbar > .container {
-  flex-wrap: nowrap;
-}
