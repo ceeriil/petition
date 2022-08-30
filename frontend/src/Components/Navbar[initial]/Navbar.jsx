@@ -45,7 +45,7 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className="nav-link "
-                href="https://github.com/ceeriil"
+                href="mailto: simonorugbo15@gmail.com"
                 target="_blank"
               >
                 Help
